@@ -70,5 +70,15 @@ public class Main {
         System.out.println("Modified array:");
         System.out.println(Arrays.toString(array8)+"\n");
 
+        /* 8.   Создайте массив из 4 случайных целых чисел из отрезка `[10;99]`.
+         Выведите его на экран в строку. Далее определите и выведите на экран сообщение о том,
+         является ли массив строго возрастающей последовательностью.*/
+        int[] array9 = new int[4];
+        for (int i = 0; i <array9.length ; i++) {
+            array9[i] = ((int)(Math.random() * 90) + 10);
+        }
+        System.out.println("array:");
+        System.out.println(Arrays.toString(array9));
+
     }
 }
