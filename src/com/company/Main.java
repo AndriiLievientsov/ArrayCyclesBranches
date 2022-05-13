@@ -137,15 +137,61 @@ public class Main {
         }
         System.out.println();
 
-        /*Создать массив из 50 случайных целых чисел из отрезка `[0;1000]` и вывести его на экран.
+        /*10.  Создать массив из 50 случайных целых чисел из отрезка `[0;1000]` и вывести его на экран.
          Создать второй массив только из чётных элементов первого массива, если они там есть,
          и вывести его на экран. */
         System.out.println("Задача 10");
+        int evenNumber = 0;
+        System.out.println("Array of 50 random integers from the interval `[0;1000]`: ");
         int[] array12 = new int[50];
         for (int i = 0; i < array12.length; i++) {
             array12[i] = (int) (Math.random() * 1000);
-        }
+            if(i % 25 == 0 && i != 0) {
+                System.out.println("\n");
+            }
+            System.out.print(array12[i] + " ");
+            if(array12[i]%2==0&array12[i]!=0)evenNumber++;
 
+        }
+        System.out.println("\n");
+        if(evenNumber>0){
+            int[] array13 = new int[evenNumber];
+            System.out.println("Array of even elements from the first array: ");
+            for(int i=0,b=0;i<array12.length;i++){
+                if (array12[i]%2==0&array12[i]!=0){
+                    array13[b]=array12[i];
+                    System.out.print(array13[b]+" ");
+                }
+            }
+        }
+        System.out.println("\n");
+
+        /*11.   Создайте массив a, заполните его. Создайте массив b, заполните его. Создайте массив c,
+        размер которого будет равен размер массива a + размер массива b. Заполнить массив c следующим образом:
+         взять элемент с массива a, следом элемент из массива b и т.д.
+         */
+        System.out.println("Задача 11");
+        int i = 0;
+        int j = 0;
+        int k = 0;
+        int[] a = new int[] {1, 3, 5, 7, 9, 11, 13, 15, 17, 19};
+        int[] b = new int[] {2, 4, 6, 8, 10, 12, 14, 16, 18, 20};
+        int[] c = new int[a.length + b.length];
+        while (i < a.length && j < b.length) {
+            if (a[i] < b[j]) {
+                c[k++] = a[i++];
+            } else {
+                c[k++] = b[j++];
+            }
+        }
+        while (i < a.length) {
+            c[k++] = a[i++];
+        }
+        while (j < b.length) {
+            c[k++] = b[j++];
+        }
+        System.out.println("Sorted array: ");
+        System.out.println(Arrays.toString(c));
 
 
     }
