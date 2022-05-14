@@ -44,6 +44,24 @@ public class Part2 {
         }
         System.out.println("\n" + "Minimum: " + min);
         System.out.println("Maximum: " + max);
+        System.out.println();
+
+        /*3. Найти повторяющиеся элементы в массиве.*/
+        System.out.println("Задача 3");
+        int [] array3 = new int [] {1, 2, 3, 4, 2, 7, 8, 8, 3};
+        System.out.println("Array: ");
+        System.out.println(Arrays.toString(array3));
+        System.out.println("Repeated elements in an array: ");
+
+        for(int i = 0; i < array3.length; i++) {
+            for(int j = i + 1; j < array3.length; j++) {
+                if(array3[i] == array3[j])
+                    System.out.print(array3[j]+ " ");
+            }
+        }
+        System.out.println();
+
+
 
 
 

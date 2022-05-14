@@ -171,27 +171,22 @@ public class Part1 {
          взять элемент с массива a, следом элемент из массива b и т.д.
          */
         System.out.println("Задача 11");
+        int [] a = {1, 3, 5, 7, 9, 11};
+        int [] b = {2, 4, 6, 8, 10, 12};
+        int [] c = new int[a.length + b.length];
         int i = 0;
         int j = 0;
-        int k = 0;
-        int[] a = new int[] {1, 3, 5, 7, 9, 11, 13, 15, 17, 19};
-        int[] b = new int[] {2, 4, 6, 8, 10, 12, 14, 16, 18, 20};
-        int[] c = new int[a.length + b.length];
-        while (i < a.length && j < b.length) {
-            if (a[i] < b[j]) {
-                c[k++] = a[i++];
+        for (int k = 0; k < c.length; k++) {
+            if(k % 2 == 0) {
+                c[k] = a[i];
+                i++;
             } else {
-                c[k++] = b[j++];
+                c[k] = b[j];
+                j++;
             }
         }
-        while (i < a.length) {
-            c[k++] = a[i++];
-        }
-        while (j < b.length) {
-            c[k++] = b[j++];
-        }
-        System.out.println("Sorted array: ");
         System.out.println(Arrays.toString(c));
+
 
 
     }
