@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.Arrays;
 
-public class Main {
+public class Part1 {
 
     public static void main(String[] args) {
         //## Часть 1
