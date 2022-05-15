@@ -3,7 +3,7 @@ package com.company;
 import java.util.Arrays;
 import java.util.Random;
 
-public class Part2 {
+public class PartTwo {
     public static void main(String[] args) {
        //## Часть 2
         /*1. Посчитать среднее арифметическое массива чисел. */
