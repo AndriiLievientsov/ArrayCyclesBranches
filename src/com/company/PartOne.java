@@ -117,7 +117,7 @@ public class PartOne {
         for (int i = 0; i < array10.length; i++) {
             array10[i] = (int) (Math.random() * 6);
             System.out.print(array10[i] + " ");
-            sumArray10 += (double) array10[i]/ array10.length;
+            sumArray10 += (double) array10[i] / array10.length;
         }
         System.out.println(" ");
         int[] array11 = new int[5];
@@ -125,15 +125,15 @@ public class PartOne {
         for (int i = 0; i < array11.length; i++) {
             array11[i] = (int) (Math.random() * 6);
             System.out.print(array11[i] + " ");
-            sumArray11 += (double) array11[i]/ array11.length;
+            sumArray11 += (double) array11[i] / array11.length;
         }
         System.out.print("\n" + "About the array: ");
-        if(sumArray10==sumArray11)
+        if (sumArray10 == sumArray11) {
             System.out.println("The arithmetic mean values of the two arrays are");
-        else {
-            if (sumArray10 > sumArray11)
+        } else {
+            if (sumArray10 > sumArray11) {
                 System.out.println("The arithmetic mean of the first array is greater than and equal");
-            else System.out.println("The arithmetic mean of the second array is greater than and equal");
+            } else System.out.println("The arithmetic mean of the second array is greater than and equal");
         }
         System.out.println();
 
@@ -146,21 +146,21 @@ public class PartOne {
         int[] array12 = new int[50];
         for (int i = 0; i < array12.length; i++) {
             array12[i] = (int) (Math.random() * 1000);
-            if(i % 25 == 0 && i != 0) {
+            if (i % 25 == 0 && i != 0) {
                 System.out.println("\n");
             }
             System.out.print(array12[i] + " ");
-            if(array12[i]%2==0&array12[i]!=0)evenNumber++;
+            if (array12[i] % 2 == 0 & array12[i] != 0) evenNumber++;
 
         }
         System.out.println("\n");
-        if(evenNumber>0){
+        if (evenNumber > 0) {
             int[] array13 = new int[evenNumber];
             System.out.println("Array of even elements from the first array: ");
-            for(int i=0,b=0;i<array12.length;i++){
-                if (array12[i]%2==0&array12[i]!=0){
-                    array13[b]=array12[i];
-                    System.out.print(array13[b]+" ");
+            for (int i = 0, b = 0; i < array12.length; i++) {
+                if (array12[i] % 2 == 0 & array12[i] != 0) {
+                    array13[b] = array12[i];
+                    System.out.print(array13[b] + " ");
                 }
             }
         }
@@ -171,13 +171,13 @@ public class PartOne {
          взять элемент с массива a, следом элемент из массива b и т.д.
          */
         System.out.println("Задача 11");
-        int [] a = {1, 3, 5, 7, 9, 11};
-        int [] b = {2, 4, 6, 8, 10, 12};
-        int [] c = new int[a.length + b.length];
+        int[] a = {1, 3, 5, 7, 9, 11};
+        int[] b = {2, 4, 6, 8, 10, 12};
+        int[] c = new int[a.length + b.length];
         int i = 0;
         int j = 0;
         for (int k = 0; k < c.length; k++) {
-            if(k % 2 == 0) {
+            if (k % 2 == 0) {
                 c[k] = a[i];
                 i++;
             } else {
@@ -186,7 +186,6 @@ public class PartOne {
             }
         }
         System.out.println(Arrays.toString(c));
-
 
 
     }
